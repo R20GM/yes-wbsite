@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Someone Special</title>
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Audio -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="https://ia801602.us.archive.org/24/items/lastairbenderost/28%20The%20Avatar%27s%20Love.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Floating Hearts Background Container -->
+  <div class="bg-hearts" id="bgHearts"></div>
+
+  <div class="container">
+    <!-- SCREEN 1: Enter Name -->
+    <div id="screen-name" class="screen active">
+      <h2>Who is this for?</h2>
+      <p style="color: #e3b3cc; margin-bottom: 15px;">Please enter your name to continue:</p>
+      <input type="text" id="nameInput" placeholder="Enter your name..." />
+      <br />
+      <button onclick="checkName()">Submit</button>
+      <div id="error" class="error-msg"></div>
+    </div>
+
+    <!-- SCREEN 2: Wrong Person -->
+    <div id="screen-wrong" class="screen">
+      <h2 style="color: #ff5c8d;">wait no sorry wrong person 🙃 </h2>
+      <p style="color: #e3b3cc; margin-bottom: 20px;">Sorry, this message isn't meant for you</p>
+      <button onclick="goBack()">Try Again</button>
+    </div>
+
+    <!-- SCREEN 3: Click the Heart -->
+    <div id="screen-heart" class="screen">
+      <h2>Hi Kelly! ❤️</h2>
+      <p style="color: #e3b3cc;">Click the heart to unlock your message!</p>
+      <div class="heart" onclick="openLetter()">❤️</div>
+    </div>
+
+    <!-- SCREEN 4: The Confession Letter -->
+    <div id="screen-letter" class="screen">
+      <div class="letter">
+        <h3 class="animated-p">Dear Kelly,</h3>
+        <p class="animated-p">I've been wanting to tell you this for a while now...</p>
+        <p class="animated-p">Every moment spent with you makes my day so much brighter. Your smile, your laugh, and the way you make everything feel more fun.</p>
+        <p class="animated-p final-line">So, in conclusion, i like you ❤️</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Link to external JS file -->
+  <script src="script.js"></script>
+</body>
+</html>
