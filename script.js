@@ -25,7 +25,7 @@ function playMusic() {
 function checkName() {
   const input = document.getElementById('nameInput').value.trim();
   
-  if (input.toLowerCase() === 'kelly') {
+  if (input.toLowerCase() === 'yes') {
     playMusic();
     showScreen('screen-heart');
   } else {
