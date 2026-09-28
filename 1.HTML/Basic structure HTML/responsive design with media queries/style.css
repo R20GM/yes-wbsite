@@ -1,0 +1,27 @@
+body {
+    background: white;
+    text-align: center;
+    padding: 20px;
+    transition: background 0.3s;
+}
+
+.mobile-message {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    body {
+        background: lightblue;
+    }
+
+    .mobile-message{
+        display: block;
+        border: 2px dashes blue;
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .desktop-message {
+        display: none;
+    }
+}

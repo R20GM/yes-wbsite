@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fungsi</title>
+</head>
+<body>
+    <script>
+        function kurang(a,b){
+            return a-b;
+        }
+        
+        function tambah(a,b){
+            return a+b;
+        }
+
+        function kali(a,b){
+            return a*b;
+        }
+        
+        function bagi(a,b){
+            return a/b;
+        }
+        num1 = parseInt(prompt('Masukkan angka 1:'))
+        num2 = parseInt(prompt('Masukkan angka 2:'))
+        op = prompt('masukkan operasi yang diinginkan (+,-,x,:):');
+        
+        if(op == '+'){
+            alert('Hasil: ' + tambah(num1, num2));
+        } else if(op == '-'){
+            alert('Hasil: ' + kurang(num1, num2));
+        }else if(op == 'x'){
+            alert('Hasil: ' + kali(num1, num2));
+        }else if(op == ':'){
+            alert('Hasil: ' + bagi(num1, num2));
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Profile</title>
+
+    <style>
+        body {
+            background-color: lightgray;
+            text-align: center;
+            font-family: Arial;
+            padding-top: 50px;
+        }
+
+        img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+
+        button {
+            margin: 5px;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img id="photo" src="C:\Users\User\Downloads\WhatsApp Image 2025-09-02 at 11.06.36_2ff81690.jpg">
+
+    <h2 id="name">Guest user</h2>
+
+    <input type="text" id="inputName" placeholder="Type your name">
+
+    <br><br>
+
+    <button onclick="changeName()">Ubah Nama</button>
+    <button onclick="changePhoto()">Ganti Foto</button>
+    <button onclick="changeTheme()">Ganti Tema</button>
+
+    <script>
+        function changeName() {
+            var newName = document.getElementById("inputName").value;
+            document.getElementById("name").innerHTML = newName;
+        }
+
+        function changePhoto() {
+            document.getElementById("photo").src =
+            "C:\\Users\\User\\Downloads\\WhatsApp Image 2025-11-04 at 20.43.51_547abb80.jpg";
+        }
+
+        function changeTheme() {
+            document.body.style.backgroundColor = "lightblue";
+        }
+    </script>
+
+</body>
+</html>

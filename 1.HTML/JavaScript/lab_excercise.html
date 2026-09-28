@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculatorFinalScore</title>
+</head>
+<body>
+    <script>
+        function getGrade(a){
+            if (final >= 90){
+                return 'A';
+            }else if(final >=80){
+                return 'B';
+            }else if(final >=70){
+                return 'C';
+            }else{
+                return 'D';
+            }
+        }
+
+        function isPassed(finalscore){
+            if (finalscore >= 75){
+                return "passed";
+            }else{
+                return "failed";
+            }
+        }
+
+        function final(a,b,c){
+            return a*0.3+b*0.3+c*0.4;
+        }
+        name = (prompt('Masukkan nama:'))
+        num1 = parseInt(prompt('Masukkan assignment:'))
+        num2 = parseInt(prompt('Masukkan midterm:'))
+        num3 = parseInt(prompt('Masukkan finalexam:'))
+
+        finalscore = final(num1,num2,num3)
+        
+        alert('Student name:' + name + '\n Hasil:' + finalscore+ '\nGrade:' + getGrade(finalscore)+'\nStatus: '+ isPassed(finalscore))
+    
+        
+    </script>
+</body>
+</html>

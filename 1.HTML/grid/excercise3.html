@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gallery</title>
+    <style>
+        .dashboard{
+            display: grid; /*menggunakan atau menggaktifkan*/
+            grid-template-columns:2fr 1fr;
+            grid-template-rows:80px 1fr 1fr;
+            gap: 15px;
+        }
+        .score{
+            background: aliceblue;
+            padding: 20px;
+            border: 1px solid navy;
+            grid-column: span 2 ;
+        }
+        .inventory{
+            background: aliceblue;
+            padding: 20px;
+            border: 1px solid navy;
+        }
+        .map{
+            background: aliceblue;
+            padding: 20px;
+            border: 1px solid navy;
+            grid-row: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="score">score</div>
+        <div class="map">map</div>
+        <div class="inventory">inventory</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0f172a;
+    color: white;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background: #1e293b;
+    height: 100vh;
+    padding: 20px;
+}
+
+.profile {
+    text-align: center;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    background: gray;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.card {
+    background: #e2e8f0;
+    color: black;
+    padding: 15px;
+    margin: 15px auto;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+.skills span {
+    display: inline-block;
+    background: #cbd5f5;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+
+.gallery {
+    display: flex;
+    gap: 10px;
+}
+
+.box {
+    flex: 1;
+    height: 100px;
+    background: #94a3b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,17 @@
+#kotak {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    position: relative;
+    margin: 20px;
+}
+
+#gambar {
+    width: 200px;
+    margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}

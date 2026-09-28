@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect CSS - HTML</title>
+    <!-- internal CSS -->
+    <style>
+    p {
+        color: green;
+        text-align: center;
+    }
+    h2 {
+        text-align: center;
+    }
+    </style>
+    <!-- eksternal CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Inline CSS -->
+    <h1 style="color: blue; text-align: center;">Welcome to My Website</h1>
+    <h1>Welcome to My Website</h1>
+    <!-- Kelemahan inline css dia ga efisien, jd hanya baik digunakan kalau mau styling yang
+    benar2 specific, contoh mau menghighlight sebuah teks -->
+
+    <!-- Internal CSS -->
+    <h2>Internal CSS</h2>
+    <p>This paragraph is styled using internal CSS.</p>
+    <p>This paragraph is also styled using internal CSS.</p>
+    <section>
+        <p>This paragraph still using internal css</p>
+    </section>
+    <!-- Internal CSS itu efektif digunakan kalau kita mau styling only one page html-->
+
+    <!-- Eksternal CSS -->
+    <h2>Eksternal CSS</h2>
+    <p>This paragraph is styled using eksternal CSS.</p>
+    <p>This paragraph is also styled using eksternal CSS.</p>
+    <!-- Eksternal CSS efektif digunakan kalau kita mau styling banyak page html sekaligus, jd ga
+    perlu nulis css di tiap2 Htmlnya-->
+</body>
+</html>

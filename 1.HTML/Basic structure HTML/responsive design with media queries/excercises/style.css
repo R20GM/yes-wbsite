@@ -1,0 +1,22 @@
+
+
+.mobile-message {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    body {
+        background: lightblue;
+    }
+
+    .card{
+        display: block;
+        border: 2px dashes blue;
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .desktop-message {
+        display: none;
+    }
+}

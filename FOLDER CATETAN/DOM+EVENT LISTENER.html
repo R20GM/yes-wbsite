@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM vs Event Listener</title>
+
+  <style>
+    /* ===== CSS ===== */
+    body {
+      font-family: Arial;
+      text-align: center;
+      padding-top: 50px;
+      background: lightgray;
+      transition: 0.3s;
+    }
+
+    button {
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== HTML ===== -->
+  <h1 id="judul">Belajar DOM & Event</h1>
+  <button id="btn">Klik Saya</button>
+
+  <script>
+    // ==============================
+    // BAGIAN DOM (Mengambil Elemen)
+    // ==============================
+
+    // Ambil elemen tombol dari halaman
+    // Ini DOM → hanya mengambil objek dari halaman
+    const tombol = document.getElementById("btn");
+
+    // Ambil elemen judul dari halaman
+    // Ini juga DOM → hanya mengambil objek
+    const judul = document.getElementById("judul");
+
+    // Sampai sini:
+    // Tidak ada yang menunggu klik
+    // Tidak ada yang berubah
+    // Kita hanya "mengambil benda"
+
+
+    // ==============================
+    // BAGIAN EVENT LISTENER
+    // ==============================
+
+    // Di sini kita berkata ke browser:
+    // "Kalau tombol ini diklik, jalankan fungsi ini"
+    tombol.addEventListener("click", function() {
+
+      // Perhatikan:
+      // Yang MENUNGGU klik adalah sistem event browser,
+      // bukan DOM.
+
+      // ==============================
+      // BAGIAN DOM MANIPULATION
+      // ==============================
+
+      // Di dalam fungsi ini barulah kita mengubah halaman
+
+      // Ini DOM → mengubah warna background
+      document.body.style.background = "skyblue";
+
+      // Ini DOM → mengubah teks judul
+      judul.textContent = "Tombol Sudah Diklik!";
+
+    });
+
+    // Kesimpulan alur:
+    // 1. DOM ambil objek
+    // 2. Event listener menunggu klik
+    // 3. Saat klik terjadi → DOM mengubah halaman
+
+  </script>
+
+</body>
+</html>

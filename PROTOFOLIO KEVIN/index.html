@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kevin - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo-container">
+            <span class="logo-name">KEVIN</span>
+            <div class="logo-line"></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link active" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" class="nav-link" onclick="showSection('about')">About</a></li>
+                <li><a href="#" class="nav-link" onclick="showSection('education')">Education</a></li>
+                <li><a href="#" class="nav-link" onclick="showSection('my-work')">My Work</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-container">
+
+        <section id="home" class="tab-content active">
+            <div class="home-wrapper">
+                <p class="subtitle">WELCOME TO MY PORTFOLIO</p>
+                <h1 class="main-title">HELLO, WORLD.</h1>
+                <p class="description-text">
+                    I'm Kevin, a student and a programmer. Explore my website to learn more about my background, my education, and the websites i created
+                </p>
+            </div>
+        </section>
+
+        <section id="about" class="tab-content">
+            <div class="about-wrapper">
+                <div class="image-column">
+                    <div class="profile-frame">
+                        <img src="C:\Users\User\Downloads\MY PIC.jpeg" alt="Profile Picture" class="profile-img">
+                    </div>
+                </div>
+                <div class="text-column">
+                    <p class="subtitle">GET TO KNOW ME</p>
+                    <h1 class="main-title">ABOUT ME</h1>
+                    <p class="description-text">
+                        Hi, I'm Kevin. I'm a 14 year old student who enjoys solving problems, making things, and learning new skills. I love gaming, especially FPS games like Valorant, and I also enjoy science, ICT, biology, PE, and talking to people (even though I'm not great with strangers).
+                    </p>
+                    <p class="description-text">
+                        In the future, I want to have a high-paying job, have a stable life, and make my family proud. I'm always looking for ways to improve and build a better version of myself.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="tab-content">
+            <div class="education-wrapper">
+                <div class="text-column">
+                    <h1 class="main-title">EDUCATION</h1>
+                    
+                    <div class="edu-item">
+                        <h2 class="edu-school">Mentari Intercultural School Grand Surya</h2>
+                        <p class="edu-detail">Junior High School | Present</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-column">
+                    <div class="grid-container">
+                        <img src="C:\Users\User\Downloads\MIS.jpe" class="grid-item item-1" alt="Classroom">
+                        <img src="C:\Users\User\Downloads\MIS LOGO.jpe" class="grid-item item-2" alt="Studying">
+                        <img src="C:\Users\User\Downloads\MIS 2.jpe" class="grid-item item-3" alt="Students">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="my-work" class="tab-content">
+            <div class="work-intro">
+                <h1 class="main-title">MY WORK</h1>
+                <p class="description-text center-text">
+                    I build web applications and responsive online platforms. Here is one of my projects:
+                </p>
+            </div>
+
+            <div class="orange-website-preview">
+                <div class="orange-nav">
+                    <div class="orange-logo">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                    <div class="orange-nav-links">
+                        <span class="orange-btn active-orange">HOME</span>
+                        <span class="orange-btn">REVIEWS</span>
+                        <span class="orange-btn">BROWSE</span>
+                    </div>
+                </div>
+
+                <div class="orange-content">
+                    <div class="orange-card">
+                        <h3>WHAT IS CLICKMART?</h3>
+                        <p>
+                            Clickmart is your go-to online store, offering a seamless shopping experience with fast delivery, a wide range of products, and secure, easy transactions.
+                        </p>
+                    </div>
+
+                    <div class="orange-center-logo">
+                        <div class="logo-box">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+
+                    <div class="orange-socials">
+                        <i class="fa-brands fa-tiktok"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

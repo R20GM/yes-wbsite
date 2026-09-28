@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Audrich Gitanto | AI & Systems Innovator</title>
+    <style>
+        /* Modern Color Palette & Custom Properties */
+        :root[data-theme="dark"] {
+            --bg-main: #0a0f1d;
+            --bg-card: #131b2e;
+            --bg-nav: rgba(10, 15, 29, 0.85);
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --accent-glow: #38bdf8;
+            --accent-primary: #2563eb;
+            --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #3b82f6 50%, #8b5cf6 100%);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        :root[data-theme="light"] {
+            --bg-main: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-nav: rgba(248, 250, 252, 0.85);
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --accent-glow: #0284c7;
+            --accent-primary: #2563eb;
+            --accent-gradient: linear-gradient(135deg, #0284c7 0%, #2563eb 50%, #6d28d9 100%);
+            --border-color: rgba(0, 0, 0, 0.08);
+            --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: var(--bg-nav);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            background: var(--accent-gradient);
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-glow);
+        }
+
+        .theme-toggle {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 10rem 0 5rem;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.35rem 1rem;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-glow);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.03em;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 580px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--accent-gradient);
+            color: #ffffff;
+            padding: 0.85rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            padding: 0.85rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Feature Card Grid (Why Kevin) */
+        .section-title {
+            text-align: center;
+            margin: 6rem 0 1rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 4rem;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .info-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .info-card h3 {
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+        }
+
+        .info-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Core Philosophy Section */
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .philosophy-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.75rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .philosophy-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-gradient);
+        }
+
+        /* Animated Engineering Roadmap (Interactive Dynamic Timeline) */
+        .roadmap-container {
+            position: relative;
+            margin: 5rem 0;
+            padding: 2rem 0;
+        }
+
+        .roadmap-track {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--border-color);
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .roadmap-progress {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: var(--accent-gradient);
+            transform: translateY(-50%);
+            z-index: 2;
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        .roadmap-nodes {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            z-index: 3;
+        }
+
+        .node-card {
+            background: var(--bg-card);
+            border: 2px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 12px;
+            width: 23%;
+            cursor: pointer;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            box-shadow: var(--card-shadow);
+        }
+
+        .node-card:hover, .node-card.active {
+            transform: translateY(-10px);
+            border-color: var(--accent-glow);
+        }
+
+        .node-step {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--accent-glow);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .node-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .node-card p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* Pulse Animation on active state */
+        .node-card.active {
+            animation: pulseGlow 2s infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 10px rgba(56, 189, 248, 0.2); }
+            100% { box-shadow: 0 0 25px rgba(56, 189, 248, 0.6); }
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+            .hero { grid-template-columns: 1fr; text-align: center; }
+            .hero p { margin: 0 auto 2rem; }
+            .btn-group { justify-content: center; }
+            .roadmap-track, .roadmap-progress { display: none; }
+            .roadmap-nodes { flex-direction: column; gap: 1.5rem; }
+            .node-card { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-container">
+            <span class="logo">KEVIN AUDRICH GITANTO</span>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#pillars">Methodology</a></li>
+                <li><a href="#roadmap">Evolution</a></li>
+                <li>
+                    <button class="theme-toggle" id="themeToggle">
+                        <span id="themeIcon">☀️</span> <span id="themeText">Light</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero" id="about">
+            <div>
+                <span class="hero-badge">Architect of Modern Intelligent Systems</span>
+                <h1>Transforming Complex Logic into Visionary Products.</h1>
+                <p>Engineered for excellence. Kevin Audrich Gitanto pushes the boundaries of software engineering, merging computational thinking with scalable infrastructure to build solutions that define industries.</p>
+                <div class="btn-group">
+                    <a href="#roadmap" class="btn-primary">Explore Growth Pipeline</a>
+                    <a href="#pillars" class="btn-secondary">Core Methodology</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-title">
+                <h2>The Audrich Advantage</h2>
+            </div>
+            <p class="section-subtitle">Why Kevin stands out as an elite engineering partner and systems leader.</p>
+
+            <div class="grid-4">
+                <div class="info-card">
+                    <h3>Strategic Computation</h3>
+                    <p>Approaching architecture from first principles—breaking problems into optimal algorithmic parts before executing a single line of code.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Production-Grade AI</h3>
+                    <p>Designing workflows built natively for artificial intelligence, treating AI models as collaborative utilities rather than standard APIs.</p>
+                </div>
+                <div class="info-card">
+                    <h3>High-Impact Projects</h3>
+                    <p>Translating abstract concepts directly into production environments with a laser focus on low latency and robust maintainability.</p>
+                </div>
+                <div class="info-card">
+                    <h3>End-to-End Ecosystems</h3>
+                    <p>Mastering the spectrum from core underlying architecture to frontend user experiences and distributed cloud orchestration.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pillars">
+            <div class="section-title">
+                <h2>Systematic Problem Solving</h2>
+            </div>
+            <p class="section-subtitle">Engineering success driven by structured computational thinking.</p>
+
+            <div class="philosophy-grid">
+                <div class="philosophy-card">
+                    <h3>01. Decomposition</h3>
+                    <p>Deconstructing massive architectural bottlenecks into isolated, highly manageable micro-tasks for scalable engineering execution.</p>
+                </div>
+                <div class="philosophy-card">
+                    <h3>02. Pattern Recognition</h3>
+                    <p>Identifying structural efficiencies across complex data streams to eliminate redundancy and maximize algorithmic performance.</p>
+                </div>
+                <div class="philosophy-card">
+                    <h3>03. Abstraction</h3>
+                    <p>Filtering out operational noise to build clean, intuitive interface layers and reusable framework components.</p>
+                </div>
+                <div class="philosophy-card">
+                    <h3>04. Algorithmic Optimization</h3>
+                    <p>Formulating rigorous step-by-step logic pipelines optimized for speed, security, and scalable growth.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap">
+            <div class="section-title">
+                <h2>From Vision to Execution</h2>
+            </div>
+            <p class="section-subtitle">Click through the evolution stages to see the progression of Kevin's engineering mastery.</p>
+
+            <div class="roadmap-container">
+                <div class="roadmap-track"></div>
+                <div class="roadmap-progress" id="roadmapProgress"></div>
+                
+                <div class="roadmap-nodes">
+                    <div class="node-card active" data-step="1" data-progress="12%">
+                        <div class="node-step">Phase 01</div>
+                        <h4>Curiosity & Foundations</h4>
+                        <p>Mastering core computer science concepts, object-oriented paradigms, and fundamental algorithms.</p>
+                    </div>
+
+                    <div class="node-card" data-step="2" data-progress="38%">
+                        <div class="node-step">Phase 02</div>
+                        <h4>Full-Stack Mastery</h4>
+                        <p>Designing responsive design systems, RESTful services, and real-time frontend architectures.</p>
+                    </div>
+
+                    <div class="node-card" data-step="3" data-progress="65%">
+                        <div class="node-step">Phase 03</div>
+                        <h4>Advanced Intelligence</h4>
+                        <p>Integrating large language models, computer vision pipelines, and intelligent automation systems.</p>
+                    </div>
+
+                    <div class="node-card" data-step="4" data-progress="100%">
+                        <div class="node-step">Phase 04</div>
+                        <h4>Global Impact</h4>
+                        <p>Architecting enterprise-scale software ecosystems that deliver measurable real-world outcomes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // State Management Module
+        const App = (() => {
+            const DOM = {
+                html: document.documentElement,
+                themeToggle: document.getElementById('themeToggle'),
+                themeIcon: document.getElementById('themeIcon'),
+                themeText: document.getElementById('themeText'),
+                nodeCards: document.querySelectorAll('.node-card'),
+                roadmapProgress: document.getElementById('roadmapProgress')
+            };
+
+            const toggleTheme = () => {
+                const currentTheme = DOM.html.getAttribute('data-theme');
+                const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                
+                DOM.html.setAttribute('data-theme', nextTheme);
+                DOM.themeIcon.textContent = nextTheme === 'dark' ? '☀️' : '🌙';
+                DOM.themeText.textContent = nextTheme === 'dark' ? 'Light' : 'Dark';
+                localStorage.setItem('kevin-portfolio-theme', nextTheme);
+            };
+
+            const initTheme = () => {
+                const savedTheme = localStorage.getItem('kevin-portfolio-theme') || 'dark';
+                DOM.html.setAttribute('data-theme', savedTheme);
+                DOM.themeIcon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+                DOM.themeText.textContent = savedTheme === 'dark' ? 'Light' : 'Dark';
+            };
+
+            const handleTimelineClick = (card) => {
+                DOM.nodeCards.forEach(c => c.classList.remove('active'));
+                card.classList.add('active');
+                
+                const progressWidth = card.getAttribute('data-progress');
+                DOM.roadmapProgress.style.width = progressWidth;
+            };
+
+            return {
+                init: () => {
+                    initTheme();
+                    
+                    // Theme Switcher Listener
+                    DOM.themeToggle.addEventListener('click', toggleTheme);
+
+                    // Roadmap Node Event Listeners
+                    DOM.nodeCards.forEach(card => {
+                        card.addEventListener('click', () => handleTimelineClick(card));
+                    });
+
+                    // Set initial timeline progress based on active card
+                    const initialActive = document.querySelector('.node-card.active');
+                    if (initialActive) {
+                        DOM.roadmapProgress.style.width = initialActive.getAttribute('data-progress');
+                    }
+                }
+            };
+        })();
+
+        document.addEventListener('DOMContentLoaded', App.init);
+    </script>
+</body>
+</html>

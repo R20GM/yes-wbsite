@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ubah warna simple</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+        }
+
+        button{
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="ubahWarna">Ubah Warna</button>
+
+    <script>
+        const tombol = document.querySelector("#ubahWarna")
+        tombol.addEventListener("click", function() {
+            document.body.style.backgroundColor = "lightgreen"
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+/* Base Styling & Dark Vibe */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121111;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 80px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Header & Nav */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 40%;
+}
+
+.logo-name {
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    white-space: nowrap;
+}
+
+.logo-line {
+    height: 1px;
+    background-color: #444;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+/* Tab Views Switcher */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.4s ease-in-out forwards;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* General Layouts & Typography */
+.subtitle {
+    color: #888;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.description-text {
+    color: #ccc;
+    line-height: 1.7;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    max-width: 650px;
+}
+
+.center-text {
+    text-align: center;
+    margin: 0 auto 30px auto;
+}
+
+/* Home Section */
+.home-wrapper {
+    margin-top: 60px;
+}
+
+/* About Section Layout */
+.about-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.image-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-frame {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    overflow: hidden;
+    filter: grayscale(100%);
+    border: 2px solid #333;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-column {
+    flex: 1.2;
+}
+
+/* Education Section Layout */
+.education-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.edu-item {
+    margin-top: 30px;
+}
+
+.edu-school {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.edu-detail {
+    color: #888;
+    margin-top: 5px;
+
+.gallery-column {
+    flex: 1;
+}
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 150px 150px;
+    gap: 15px;
+    filter: grayscale(100%);
+}
+
+.grid-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.item-1 {
+    grid-row: 1 / span 2;
+}
+
+/* My Work Section (Orange Website Mockup) */
+.work-intro {
+    text-align: center;
+}
+
+.orange-website-preview {
+    background-color: #fca338;
+    border-radius: 20px;
+    padding: 30px;
+    color: #1a1a1a;
+    margin-top: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.orange-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.orange-logo {
+    background: #fff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fca338;
+    font-size: 1.2rem;
+}
+
+.orange-nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.orange-btn {
+    padding: 8px 20px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.active-orange {
+    background-color: #ffd18c;
+    border-radius: 20px;
+}
+
+.orange-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.orange-card {
+    background-color: #fba94b;
+    padding: 30px 20px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.orange-card h3 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.orange-card p {
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.orange-center-logo .logo-box {
+    background-color: #fffef2;
+    width: 140px;
+    height: 140px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #e85d04;
+}
+
+.orange-socials {
+    background-color: #fba94b;
+    padding: 20px 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1.3rem;
+}
+
+
+.page-dots {
+    display: flex;
+    gap: 8px;
+    margin-top: 40px;
+}
+
+.page-dots span {
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+    body { padding: 20px; }
+    .about-wrapper, .education-wrapper, .orange-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .orange-card { width: 100%; }
+} 

@@ -1,0 +1,82 @@
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #222;
+      padding: 15px 20px;
+    }
+
+    .logo {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .hamburger {
+      display: none;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    .content {
+      padding: 30px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .content {
+        padding: 10px;
+      }
+
+      .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #333;
+        width: 200px;
+        padding: 10px;
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .menu li {
+        text-align: center;
+        padding: 1rem;
+      }
+    }

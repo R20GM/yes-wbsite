@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Mengubah Konten & Gaya</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: #f2f2f2;
+      color: black;
+      width: 320px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    img {
+      width: 150px;
+      margin: 15px 0;
+    }
+
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      margin: 4px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>MENGUBAH KONTEN & GAYA</h1>
+
+  <div class="card">
+    <h3 id="judul">Judul Awal</h3>
+
+    <!-- GAMBAR AWAL: KEJU -->
+    <img id="gambar"
+         src="C:/Users/User/Downloads/download (3).jpg"
+         alt="cheese">
+
+    <p id="hasil">Judul Italic (Inner HTML)</p>
+
+    <button onclick="ubahTeks()">Ubah Teks</button>
+    <button onclick="ubahHTML()">Ubah HTML</button>
+    <button onclick="ubahGaya()">Ubah Gaya</button>
+    <button onclick="ubahGambar()">Ubah Gambar</button>
+  </div>
+
+  <!-- CONNECT KE FILE JS -->
+  <script src="script4.js"></script>
+</body>
+</html>

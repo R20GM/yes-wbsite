@@ -1,0 +1,46 @@
+
+CONTOH KODE BURUK:
+
+<div class="top"><div class="menu">...</div><div>
+
+
+
+CONTOH KODE BAIK:
+
+<header>
+    nav class="navbar">...</nav>
+<header>
+
+
+
+contoh kode buruk:
+
+.box1 { color: red; }
+.box2 { color: blue !important; }
+
+nama class di code ini tidak jelas, ia memakai bo1 dan box2. Computer tdk bs membedadkan antara barang1 & barang2 harus lebih spesifik, dan di code ini pakai !important
+
+contoh kode baik(pakai BEM):
+
+.card__title--highlight {
+    color: var(--primary-color);
+}
+
+di kode ini, file css seperti header, dan button terpisah dan tidak menggukanan !important.
+
+
+
+
+
+
+
+
+
+
+
+
+function x(item quantity, item price) {return a+b; }
+
+function applyDiscount(price) {
+    if (price > 100000) return price *0.9
+}//kode ini sudah bagus, udh spesifik dan rapi. apply discount itu berfungsi jika harga lebih besar dari 100000 kasih balik harga *0.9

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gallery</title>
+    <style>
+        .layout{
+            display: grid; /*menggunakan atau menggaktifkan*/
+            grid-template-columns:200px 1fr;
+            grid-template-rows:100px 1fr 70px;
+            grid-template-areas: 
+                "header header"
+                "sidebar content"
+                "footer footer";
+            gap:15px;
+        }
+        .header{
+            grid-area: header;
+            background: aliceblue;
+            padding: 20px;
+            border: 1px solid navy;
+
+        }
+        .sidebar{
+            grid-area: sidebar;
+            background: aliceblue;
+            padding: 20px;
+            border: 1px solid navy;
+        }
+        .content{
+            grid-area: content;
+            background: aliceblue;
+            padding: 20px;
+            border: 1px solid navy;
+        }
+        .footer{
+            grid-area: footer;
+            background: aliceblue;
+            padding: 20px;
+            border: 1px solid navy;
+        }
+
+        @media (max-width: 600px) {
+            .layout {
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                "header"
+                "content"
+                "sidebar"
+                "footer";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <div class="header">header</div>
+        <div class="sidebar">sidebar</div>
+        <div class="content">content</div>
+        <div class="footer">footer</div>
+
+    </div>
+</body>
+</html>
